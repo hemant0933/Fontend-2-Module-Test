@@ -13,9 +13,10 @@ var clickbait = 0
 img1.addEventListener('click', displayForm)
 
 function displayForm(){
-  
+    
     if(clickbait1 < 1){
-   formfilled.classList.add('unhide')
+        
+    formfilled.classList.add('unhide')
     input_name = document.getElementById('name').value 
     input_username = document.getElementById('username').value
 
@@ -32,7 +33,8 @@ else {
 img2.addEventListener('click', displayInput)
 
 function displayInput() {
-    if(clickbait2<1){
+    if(clickbait2 < 1){
+       
     let input_name = document.getElementById('name').value
     console.log(input_name)
     let input_username = document.getElementById('username').value
@@ -40,6 +42,7 @@ function displayInput() {
     formfilled.classList.remove('unhide')
 
     let showinput = document.createElement('p')
+    showinput.setAttribute('class', 'showinput')
     showinput.textContent = 'Name:-'+ input_name +" , Username:- " + input_username
    
     // showinput.textContent = input_username
@@ -56,7 +59,8 @@ function displayInput() {
 img3.addEventListener('click', displayDiceImg)
 
 function displayDiceImg(){
-    if(clickbait3<1){
+    if(clickbait3 < 1){
+
     let diceimg = document.createElement('img')
     diceimg.setAttribute('src','https://images.unsplash.com/photo-1634277448989-7d2f681d9172?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGRpY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
     diceimg.setAttribute('id','dice')
@@ -90,30 +94,28 @@ function generateRandomText(){
    let box2= document.querySelector('.box2')
    box2.appendChild(showdigit)
    
-//    for(let i=0;i<newarr;i++){
-//     sum+=newarr[i];
-//    }
    clickbait4++ 
-}
-else if(clickbait4 == 3){
-    
-    newarr = [...document.querySelectorAll('.nums')];
-     for(let i=0; i<newarr.length; i++){
-        d1 = newarr[i].innerHTML
-        sum+=+d1
-       }
-       console.log(sum)
 
-       if(sum > 10){
-        img4.addEventListener('click',fourthImage)
     }
-      if(sum <= 10) {
-        sum = 0
-        clickbait4 = 0  
-      }
-}
 
+    newarr = [...document.querySelectorAll('.nums')];
+    for(let i=0; i<newarr.length; i++){
+       d1 = newarr[i].innerHTML
+       sum+=+d1
+      }
+      console.log(sum)
+    if(sum > 10){
+        img4.addEventListener('click',fourthImage)
+       }
+    if(sum <= 10){
+        console.log('No chance')
+        // box2= document.querySelector('.box2')
+        // showdigit = document.getElementsByClassName('nums')
+        // showdigit.innerHTML = 'Bad Luck I dont want to give you second !!!!'
+        // box3.appendChild(showinput)
+       }
 }
+    
 
 // adding event listner to fourth image
 
@@ -139,5 +141,3 @@ function fourthImage(){
         img4.removeEventListener('click',fourthImage)
      }
 }
-
-
