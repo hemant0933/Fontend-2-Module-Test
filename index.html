@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemant Kumar Module Test</title>
+    <style>
+        .container{
+            width: 800px;
+            max-width: 100vw;
+            display: flex;
+            
+            flex-wrap: no-wrap;
+            /* padding: 20px 0; */
+        }
+        .item{
+            margin: 10px;
+        }
+        .formContainer{
+            margin: 20px 20px;
+            display: none;
+        }
+        .unhide{
+            display: block;
+        }
+        .box2{
+            /* margin-left: 50px; */
+            display: flex; 
+        }
+    </style>
+</head>
+  <body>
+    <h1>Image Gallery</h1>
+    <div class="container">
+     
+      <div class="item" id="img1"><img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FydG9vbiUyMGNoYXJhY3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" style="width: 350px; height: 262px;" alt=""></div>
+      <div class="item" id="img2"><img src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FydG9vbiUyMGNoYXJhY3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" style="width: 350px; height: 262px;" alt=""></div>
+      <div class="item" id="img3"><img src="https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FydG9vbiUyMGNoYXJhY3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" style="width: 350px;" alt=""></div>
+      <div class="item" id="img4"><img src="https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGNhcnRvb24lMjBjaGFyYWN0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width: 350px;" alt=""></div>
+    </div>
+
+    <!-- form  -->
+    <div class="show">
+        <form method="post" class="formContainer">
+            <label for="name">Name</label><br>
+            <input type="text" name="" id="name"><br><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email"><br><br>
+            <label for="username">Username</label><br>
+            <input type="text" name="" id="username"><br><br>
+            <!-- <input type="submit"> -->
+        </form>
+
+        <div class="box2">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
